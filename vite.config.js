@@ -10,7 +10,7 @@ export default defineConfig(({ mode }) => {
     server: {
       proxy: {
         '/api': {
-          target: env.VITE_BACKEND_BASE_URL, // Use the loaded env variable
+          target: "https://api.nzfertilisertracker.com/" || env.VITE_BACKEND_BASE_URL, // Use the loaded env variable
           changeOrigin: true,
           secure: false,
         },
