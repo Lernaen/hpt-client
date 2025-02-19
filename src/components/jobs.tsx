@@ -7,7 +7,7 @@ function Joblist() {
     queryKey: ['job'],
     queryFn: () => getAllJobs(),
   })
-
+// console.log("data===>>>", data)
   if (isPending) {
     return <p>Fetching</p>
   }

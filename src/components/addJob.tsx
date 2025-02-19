@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { useMutation, useQueryClient } from '@tanstack/react-query'
 import { ChangeEvent, FormEvent, useState } from 'react'
 import { NewJob } from '../models/jobsModel'
