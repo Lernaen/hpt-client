@@ -7,7 +7,7 @@ function Joblist() {
     queryKey: ['job'],
     queryFn: () => getAllJobs(),
   })
-// console.log("data===>>>", data)
+  // console.log("data===>>>", data)
   if (isPending) {
     return <p>Fetching</p>
   }
@@ -25,7 +25,10 @@ function Joblist() {
           {data?.map((job) => {
             return (
               <li key={job.id}>
-                {job.jobDate}, {job.docketNumber}, {job.reasonsForFailure}
+                {job.jobDate}, {job.product}, {job.applicationRate},{' '}
+                {job.orderNumber}, {job.docketNumber}, {job.driver},{' '}
+                {job.truckNumber}, {job.pickup}, {job.cropType},{' '}
+                {job.reasonsForFailure}
               </li>
             )
           })}{' '}
