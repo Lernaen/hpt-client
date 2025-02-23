@@ -18,3 +18,9 @@ export async function addJob(newjob: NewJob) {
   console.log(res.statusCode)
   return res.body as Job
 }
+
+export async function retireJobById(id: number) {
+  const res = await request.delete(`${BASE_URL}/api/v1/jobs/${id}`)
+  console.log(res.statusCode)
+  return
+}
