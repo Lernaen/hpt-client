@@ -1,6 +1,7 @@
 import { useQuery } from '@tanstack/react-query'
 import { getAllJobs } from '../apis/jobs.ts'
 import DropButton from './DropButton.tsx'
+import RetireJob from './deleteJob.tsx'
 
 function Joblist() {
   const { data, isPending, isError, error } = useQuery({
@@ -29,6 +30,7 @@ function Joblist() {
                 {job.orderNumber}, {job.docketNumber}, {job.driver},{' '}
                 {job.truckNumber}, {job.pickup}, {job.cropType},{' '}
                 {job.reasonsForFailure}
+                <RetireJob deleteId={job.id} />
               </li>
             )
           })}{' '}
