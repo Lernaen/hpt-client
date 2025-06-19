@@ -12,7 +12,7 @@
   "rewrites": [
     {
       "source": "/api/(.*)",
-      "destination": "https://YOUR-HEROKU-APP.herokuapp.com/api/$1"
+      "destination": "https://hammond-tracker-server-0f3426cc2e00.herokuapp.com/api/$1"
     }
   ]
 }
